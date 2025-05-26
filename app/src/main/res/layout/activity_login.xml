@@ -24,6 +24,7 @@
             android:layout_height="wrap_content" />
 
         <EditText
+            android:id="@+id/editUsername"
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:layout_marginTop="24dp"
@@ -31,6 +32,7 @@
             android:layout_height="wrap_content" />
 
         <EditText
+            android:id="@+id/editPassword"
             android:hint="Password"
             android:inputType="textPassword"
             android:layout_marginTop="12dp"
@@ -46,6 +48,7 @@
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/btnLogin"
             android:text="Sign in"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/purple_500"
