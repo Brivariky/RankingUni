@@ -1063,7 +1063,7 @@
             android:layout_height="32dp"
             android:src="@drawable/li_search"
             android:padding="2dp"
-           />
+            />
 
         <ImageView
             android:layout_width="64dp"
@@ -1077,7 +1077,7 @@
             android:layout_height="32dp"
             android:src="@drawable/li_user"
             android:padding="2dp"
-             />
+            />
     </LinearLayout>
 
 </LinearLayout>
