@@ -7,7 +7,7 @@
     android:background="@drawable/mit"
     android:padding="16dp"
     tools:context=".MainActivity">
-
+  
     <!-- Top Bar -->
     <RelativeLayout
         android:layout_width="match_parent"
@@ -67,16 +67,66 @@
         android:orientation="horizontal"
         android:padding="12dp"
         android:shape="rectangle">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/garisv" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#2E2A85"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/garist" />
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:background="#FDC93B"
+        android:padding="12dp"
+        android:layout_marginHorizontal="8dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center"
+        android:backgroundTintMode="src_in"
+        android:backgroundTint="#FDC93B"
+        android:clipToPadding="false"
+        android:shape="rectangle"
+        android:elevation="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+
 
         <ImageView
             android:layout_width="20dp"
             android:layout_height="20dp"
+
             android:src="@drawable/li_search" />
+
 
         <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+
             android:background="@android:color/transparent"
             android:hint="search..."
             android:paddingStart="12dp"
@@ -115,6 +165,7 @@
                     android:paddingStart="12dp">
 
                     <TextView
+
                         android:text="Universitas Muhammadiyah Surakarta"
                         android:textStyle="bold"
                         android:textSize="16sp"
@@ -1022,21 +1073,6 @@
 
                     <TextView
                         android:text="Universitas Mataram"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:textColor="#000000"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:text="World Rank - year"
-                        android:textSize="14sp"
-                        android:textColor="#333333"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
-            </LinearLayout>
-
             <!-- Tambahkan block di atas untuk universitas lainnya -->
 
         </LinearLayout>
