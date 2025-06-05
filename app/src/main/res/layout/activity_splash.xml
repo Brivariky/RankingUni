@@ -16,13 +16,13 @@
 
     <!-- Gambar cat (di atas mit) -->
     <ImageView
-        android:id="@+id/catImage"
+        android:id="@+id/logoImage"
         android:layout_width="147dp"
         android:layout_height="147dp"
         android:layout_centerHorizontal="true"
         android:layout_alignTop="@id/mitImage"
         android:layout_marginTop="20dp"
-        app:srcCompat="@drawable/cat" />
+        app:srcCompat="@drawable/li_logorank" />
 
     <!-- Tulisan di bawah -->
     <TextView
