@@ -1,0 +1,236 @@
+[
+  {
+    "id": "UMS001",
+    "university_name": "Universitas Muhammadiyah Surakarta",
+    "description": "World Rank - 2024",
+    "current_ranking": 1486,
+    "predicted_ranking": 1204,
+    "logo": "li_ums",
+    "website": "https://www.ums.ac.id"
+  },
+  {
+    "id": "UA002",
+    "university_name": "Universitas Airlangga",
+    "description": "World Rank - 2024",
+    "current_ranking": 346,
+    "predicted_ranking": 345,
+    "logo": "li_airlangga",
+    "website": "https://www.unair.ac.id"
+  },
+  {
+    "id": "UAJ003",
+    "university_name": "Universitas Katolik Indonesia Atma Jaya",
+    "description": "World Rank - 2024",
+    "current_ranking": 1211,
+    "predicted_ranking": 1224,
+    "logo": "li_ajk",
+    "website": "https://www.atmajaya.ac.id"
+  },
+  {
+    "id": "ITB004",
+    "university_name": "Institut Teknologi Bandung",
+    "description": "World Rank - 2024",
+    "current_ranking": 281,
+    "predicted_ranking": 274,
+    "logo": "li_itb",
+    "website": "https://www.itb.ac.id"
+  },
+  {
+    "id": "BINUS005",
+    "university_name": "Universitas Bina Nusantara",
+    "description": "World Rank - 2024",
+    "current_ranking": 1021,
+    "predicted_ranking": 1126,
+    "logo": "li_binus",
+    "website": "https://binus.ac.id/"
+  },
+  {
+    "id": "UNDIP006",
+    "university_name": "Universitas Diponegoro",
+    "description": "World Rank - 2024",
+    "current_ranking": 794,
+    "predicted_ranking": 616,
+    "logo": "li_undip",
+    "website": "https://www.undip.ac.id"
+  },
+  {
+    "id": "UGM007",
+    "university_name": "Universitas Gadjah Mada",
+    "description": "World Rank - 2024",
+    "current_ranking": 263,
+    "predicted_ranking": 256,
+    "logo": "li_ugm",
+    "website": "https://www.ugm.ac.id"
+  },
+  {
+    "id": "ITS008",
+    "university_name": "Institut Teknologi Sepuluh Nopember",
+    "description": "World Rank - 2024",
+    "current_ranking": 622,
+    "predicted_ranking": 623,
+    "logo": "li_its",
+    "website": "https://www.its.ac.id"
+  },
+  {
+    "id": "IPB009",
+    "university_name": "Institut Pertanian Bogor",
+    "description": "World Rank - 2024",
+    "current_ranking": 491,
+    "predicted_ranking": 593,
+    "logo": "li_ipb",
+    "website": "https://ipb.ac.id/"
+  },
+  {
+    "id": "UKP010",
+    "university_name": "Universitas Kristen Petra",
+    "description": "World Rank - 2024",
+    "current_ranking": 1485,
+    "predicted_ranking": 1208,
+    "logo": "li_ukp",
+    "website": "https://petra.ac.id/"
+  },
+  {
+    "id": "UM011",
+    "university_name": "Universitas Negeri Malang",
+    "description": "World Rank - 2024",
+    "current_ranking": 1439,
+    "predicted_ranking": 1203,
+    "logo": "li_unm",
+    "website": "https://um.ac.id/"
+  },
+  {
+    "id": "TELU012",
+    "university_name": "Universitas Telkom",
+    "description": "World Rank - 2024",
+    "current_ranking": 1103,
+    "predicted_ranking": 1158,
+    "logo": "li_telkom",
+    "website": "https://telkomuniversity.ac.id/"
+  },
+  {
+    "id": "UNUD013",
+    "university_name": "Universitas Udayana",
+    "description": "World Rank - 2024",
+    "current_ranking": 1447,
+    "predicted_ranking": 1203,
+    "logo": "li_udayana",
+    "website": "https://www.unud.ac.id/"
+  },
+  {
+    "id": "UNAND014",
+    "university_name": "Universitas Andalas",
+    "description": "World Rank - 2024",
+    "current_ranking": 1484,
+    "predicted_ranking": 1202,
+    "logo": "li_andalas",
+    "website": "https://www.unand.ac.id/"
+  },
+  {
+    "id": "UB015",
+    "university_name": "Universitas Brawijaya",
+    "description": "World Rank - 2024",
+    "current_ranking": 837,
+    "predicted_ranking": 642,
+    "logo": "li_unbraw",
+    "website": "https://ub.ac.id/"
+  },
+  {
+    "id": "UNHAS016",
+    "university_name": "Universitas Hasanuddin",
+    "description": "World Rank - 2024",
+    "current_ranking": 1145,
+    "predicted_ranking": 1154,
+    "logo": "li_unhas",
+    "website": "https://unhas.ac.id/"
+  },
+  {
+    "id": "UI017",
+    "university_name": "Universitas Indonesia",
+    "description": "World Rank - 2024",
+    "current_ranking": 238,
+    "predicted_ranking": 221,
+    "logo": "li_ui",
+    "website": "https://www.ui.ac.id/"
+  },
+  {
+    "id": "UMY018",
+    "university_name": "Universitas Muhammadiyah Yogyakarta",
+    "description": "World Rank - 2024",
+    "current_ranking": 1366,
+    "predicted_ranking": 1222,
+    "logo": "li_umy",
+    "website": "https://www.umy.ac.id/"
+  },
+  {
+    "id": "UII019",
+    "university_name": "Universitas Islam Indonesia",
+    "description": "World Rank - 2024",
+    "current_ranking": 1365,
+    "predicted_ranking": 1218,
+    "logo": "li_uii",
+    "website": "https://www.uii.ac.id/"
+  },
+  {
+    "id": "UNY020",
+    "university_name": "Universitas Negeri Yogyakarta",
+    "description": "World Rank - 2024",
+    "current_ranking": 1409,
+    "predicted_ranking": 1214,
+    "logo": "li_uny",
+    "website": "https://www.uny.ac.id/"
+  },
+  {
+    "id": "UNPAD021",
+    "university_name": "Universitas Padjadjaran",
+    "description": "World Rank - 2024",
+    "current_ranking": 672,
+    "predicted_ranking": 621,
+    "logo": "li_unpad",
+    "website": "https://www.unpad.ac.id/"
+  },
+  {
+    "id": "UPI022",
+    "university_name": "Universitas Pendidikan Indonesia",
+    "description": "World Rank - 2024",
+    "current_ranking": 1367,
+    "predicted_ranking": 1209,
+    "logo": "li_upi",
+    "website": "https://www.upi.edu/"
+  },
+  {
+    "id": "UNS023",
+    "university_name": "Universitas Sebelas Maret",
+    "description": "World Rank - 2024",
+    "current_ranking": 1146,
+    "predicted_ranking": 1142,
+    "logo": "li_uns",
+    "website": "https://uns.ac.id/"
+  },
+  {
+    "id": "USU024",
+    "university_name": "Universitas Sumatera Utara",
+    "description": "World Rank - 2024",
+    "current_ranking": 1368,
+    "predicted_ranking": 1217,
+    "logo": "li_unsu",
+    "website": "https://www.usu.ac.id/"
+  },
+  {
+    "id": "UNILA025",
+    "university_name": "Universitas Lampung",
+    "description": "World Rank - 2024",
+    "current_ranking": 1492,
+    "predicted_ranking": 1212,
+    "logo": "li_unla",
+    "website": "https://www.unila.ac.id/"
+  },
+  {
+    "id": "UNRAM026",
+    "university_name": "Universitas Mataram",
+    "description": "World Rank - 2024",
+    "current_ranking": 1493,
+    "predicted_ranking": 1206,
+    "logo": "li_unmat",
+    "website": "https://unram.ac.id/"
+  }
+]

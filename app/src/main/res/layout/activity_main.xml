@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mit"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/iconLeft"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/garisv"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today"
+            android:textColor="#2E2A85"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/iconRight"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/garist"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"  android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FDC93B"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/li_search" />
+
+        <EditText
+            android:id="@+id/edit_text_search" android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="search..."
+            android:paddingStart="12dp"
+            android:textColorHint="#5C5C5C"
+            android:inputType="text"
+            android:imeOptions="actionSearch" /> </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_universities"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:listitem="@layout/list_item_university"/> <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="#FFFFFF"
+    android:paddingVertical="8dp">
+
+    <ImageView
+        android:id="@+id/nav_home" android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:src="@drawable/li_home"
+        android:padding="2dp"
+        android:contentDescription="Home" />
+
+    <ImageView
+        android:id="@+id/nav_search_bottom" android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:src="@drawable/li_search"
+        android:padding="2dp"
+        android:contentDescription="Search Navigation" />
+
+    <ImageView
+        android:id="@+id/nav_clock" android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:src="@drawable/li_clock"
+        android:padding="2dp"
+        android:contentDescription="History/Clock" />
+
+    <ImageView
+        android:id="@+id/nav_user" android:layout_width="64dp"
+        android:layout_height="32dp"
+        android:src="@drawable/li_user"
+        android:padding="2dp"
+        android:contentDescription="User Profile" />
+</LinearLayout>
+
+</LinearLayout>

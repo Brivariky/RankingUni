@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1044312492053",
+    "project_id": "university-ranking-bb197",
+    "storage_bucket": "university-ranking-bb197.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044312492053:android:00220ec2658b21df95e61c",
+        "android_client_info": {
+          "package_name": "com.example.rankinguni"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044312492053-f4d24ugh8bhu36h2aou26400um4bqilf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rankinguni",
+            "certificate_hash": "9a8f760790545cc5db84269fee3751d154a3b2c4"
+          }
+        },
+        {
+          "client_id": "1044312492053-3iunhh8ddq1pgag2m1ce7dujvt6nrjuf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ5JxBXHQ26YDAxWQJ3rhvIFeBbpsDavQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044312492053-3iunhh8ddq1pgag2m1ce7dujvt6nrjuf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
