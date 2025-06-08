@@ -77,6 +77,9 @@ class MainActivity : AppCompatActivity() {
             universityList.add(university)
         }
 
+        // >>> TAMBAHKAN BARIS INI UNTUK MENGURUTKAN <<<
+        universityList.sortBy { it.currentRank }
+
         allUniversities = universityList
         universityAdapter.updateData(allUniversities)
     }
