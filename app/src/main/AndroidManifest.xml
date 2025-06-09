@@ -1,6 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.rankinguni">
 
+    <!-- Permission to access the internet -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -9,12 +12,11 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RankingUni"
         tools:targetApi="31">
 
-        <!-- Splash jadi launcher pertama -->
+        <!-- Launcher: Splash screen -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -24,18 +26,40 @@
             </intent-filter>
         </activity>
 
-        <!-- Tambahkan Login dan MainActivity -->
-        <activity android:name=".LoginActivity" android:exported="true" />
-        <activity android:name=".MainActivity" android:exported="true" />
-        <activity android:name=".RegisterActivity" android:exported="true"/>
+        <!-- Login screen -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+
+        <!-- Main dashboard screen -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+
+        <!-- User registration screen -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true" />
+
+        <!-- Prediction details screen -->
         <activity
             android:name=".PredictActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"> <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".MainActivity" />
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
 
+        <!-- Profile screen -->
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
 
     </application>
 

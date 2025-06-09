@@ -22,6 +22,8 @@
         android:layout_centerHorizontal="true"
         android:layout_alignTop="@id/mitImage"
         android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_image"
+        android:clipToOutline="true"
         app:srcCompat="@drawable/li_logorank" />
 
     <!-- Tulisan di bawah -->

@@ -5,67 +5,73 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".PredictActivity"> <ImageView
-    android:id="@+id/university_logo_header_predict"
-    android:layout_width="120dp"
-    android:layout_height="120dp"
-    android:layout_centerHorizontal="true"
-    android:layout_marginTop="24dp"
-    android:src="@mipmap/ic_launcher" /> <LinearLayout
-    android:id="@+id/ranking_container_predict"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@id/university_logo_header_predict"
-    android:layout_marginTop="32dp"
-    android:orientation="horizontal"
-    android:gravity="center">
+    tools:context=".PredictActivity">
+
+    <ImageView
+        android:id="@+id/university_logo_header_predict"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:src="@mipmap/ic_launcher" />
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:id="@+id/ranking_container_predict"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="16dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Today's Rank"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
-        <TextView
-            android:id="@+id/current_rank_text_predict"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="N/A"
-            android:textSize="48sp"
-            android:textStyle="bold"
-            android:layout_marginTop="8dp"/>
-    </LinearLayout>
+        android:layout_below="@id/university_logo_header_predict"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        android:gravity="center">
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="16dp">
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Predicted Rank"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
-        <TextView
-            android:id="@+id/predicted_rank_text_predict"
-            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today's Rank"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/current_rank_text_predict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="N/A"
-            android:textSize="48sp"
-            android:textStyle="bold"
-            android:layout_marginTop="8dp"/>
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Predicted Rank"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/predicted_rank_text_predict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="N/A"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
 
     <ImageView
         android:id="@+id/university_website_button_predict"
@@ -74,9 +80,11 @@
         android:layout_below="@id/ranking_container_predict"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
-        android:src="@mipmap/ic_launcher" android:clickable="true"
+        android:src="@mipmap/ic_launcher"
+        android:clickable="true"
         android:focusable="true"
-        android:contentDescription="Open University Website"/>
+        android:contentDescription="Open University Website"
+        android:visibility="gone" /> <!-- Hide button by default -->
 
     <WebView
         android:id="@+id/webview_university_predict"
@@ -84,5 +92,5 @@
         android:layout_height="match_parent"
         android:layout_below="@id/university_website_button_predict"
         android:layout_marginTop="16dp"
-        android:visibility="gone"/>
+        android:visibility="visible"/> <!-- WebView is visible -->
 </RelativeLayout>

@@ -31,9 +31,11 @@ class PredictActivity : AppCompatActivity() {
         university = universityData
         loadUniversityData()
 
-        binding.universityWebsiteButtonPredict.setOnClickListener {
-            openUniversityWebsite(university.websiteUrl)
-        }
+        // Hide the website button (optional)
+        binding.universityWebsiteButtonPredict.visibility = View.GONE
+
+        // Automatically open website
+        openUniversityWebsite(university.websiteUrl)
     }
 
     private fun loadUniversityData() {
@@ -42,7 +44,7 @@ class PredictActivity : AppCompatActivity() {
         Glide.with(this)
             .load(university.logoUrl)
             .placeholder(R.mipmap.ic_launcher)
-            .error(R.mipmap.ic_launcher_round)
+            .error(R.mipmap.ic_launcher)
             .into(binding.universityLogoHeaderPredict)
 
         binding.currentRankTextPredict.text = university.currentRank.toString()
