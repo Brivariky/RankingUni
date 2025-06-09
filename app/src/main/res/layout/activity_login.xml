@@ -54,7 +54,6 @@
             android:padding="14dp"
             android:textColor="#2F3185"
             android:textColorHint="#999999"
-            android:typeface="sans"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/eye_scaled"
