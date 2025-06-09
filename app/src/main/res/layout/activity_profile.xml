@@ -36,4 +36,29 @@
         android:textSize="16sp"
         android:layout_gravity="center"
         android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/buttonChangePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Password"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2F3185"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:paddingHorizontal="16dp" />
+
+    <Button
+        android:id="@+id/buttonLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log Out"
+        android:textColor="#2F3185"
+        android:backgroundTint="#F5C23E"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:paddingHorizontal="16dp" />
+
 </LinearLayout>

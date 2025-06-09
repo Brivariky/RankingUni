@@ -3,7 +3,9 @@ package com.example.rankinguni
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
+import android.text.InputType
 import android.util.Patterns
+import android.view.MotionEvent
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
@@ -28,6 +30,29 @@ class LoginActivity : AppCompatActivity() {
         val loginButton = findViewById<Button>(R.id.btnLogin)
         val createAccount = findViewById<TextView>(R.id.createAccountText)
         val forgotPasswordText = findViewById<TextView>(R.id.textForgotPassword)
+
+        // Setup password visibility toggle
+        passwordInput.setOnTouchListener { _, event ->
+            if (event.action == MotionEvent.ACTION_UP) {
+                // Check if the touch is on the drawableEnd (eye icon)
+                if (event.rawX >= (passwordInput.right - passwordInput.compoundDrawables[2].bounds.width() - passwordInput.paddingEnd)) {
+                    val cursorPosition = passwordInput.selectionEnd
+                    if (passwordInput.inputType == (InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD)) {
+                        // Show password
+                        passwordInput.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                        passwordInput.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.eye_close_scaled, 0)
+                    } else {
+                        // Hide password
+                        passwordInput.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+                        passwordInput.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.eye_scaled, 0)
+                    }
+                    // Restore cursor position
+                    passwordInput.setSelection(cursorPosition)
+                    return@setOnTouchListener true
+                }
+            }
+            false
+        }
 
         // Google sign-in config
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
