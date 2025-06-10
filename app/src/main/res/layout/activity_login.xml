@@ -56,7 +56,7 @@
             android:textColorHint="#999999"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableEnd="@drawable/eye_scaled"
+            android:drawableEnd="@drawable/eye_close_scaled"
             android:drawablePadding="8dp" />
 
         <!-- Forgot Password -->
