@@ -30,15 +30,16 @@ class LoginActivity : AppCompatActivity() {
         val loginButton = findViewById<Button>(R.id.btnLogin)
         val createAccount = findViewById<TextView>(R.id.createAccountText)
         val forgotPasswordText = findViewById<TextView>(R.id.textForgotPassword)
+        val googleSignInButton = findViewById<ImageView>(R.id.google)
 
-        // Google sign-in config
+        // Google Sign-In config
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
-
         googleClient = GoogleSignIn.getClient(this, gso)
 
+        // 🔐 Email/Password Login
         loginButton.setOnClickListener {
             val email = emailInput.text.toString().trim()
             val password = passwordInput.text.toString()
@@ -64,6 +65,29 @@ class LoginActivity : AppCompatActivity() {
                 }
         }
 
+        // 🔁 Password Visibility Toggle
+        var isPasswordVisible = false
+        passwordInput.setOnTouchListener { _, event ->
+            val DRAWABLE_END = 2
+            if (event.action == MotionEvent.ACTION_UP) {
+                val drawableEnd = passwordInput.compoundDrawables[DRAWABLE_END]
+                if (drawableEnd != null &&
+                    event.rawX >= (passwordInput.right - drawableEnd.bounds.width() - passwordInput.paddingEnd)
+                ) {
+                    isPasswordVisible = !isPasswordVisible
+                    passwordInput.inputType = if (isPasswordVisible)
+                        InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                    else
+                        InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+
+                    passwordInput.setSelection(passwordInput.text.length)
+                    passwordInput.typeface = android.graphics.Typeface.SANS_SERIF
+                }
+            }
+            false
+        }
+
+        // 🔐 Forgot Password Dialog
         forgotPasswordText.setOnClickListener {
             val dialogView = layoutInflater.inflate(R.layout.dialog_reset_password, null)
             val resetEmailInput = dialogView.findViewById<EditText>(R.id.resetEmailInput)
@@ -94,27 +118,27 @@ class LoginActivity : AppCompatActivity() {
             alertDialog.show()
         }
 
-        findViewById<ImageView>(R.id.google).setOnClickListener {
+        // 🟢 Google Sign-In
+        googleSignInButton.setOnClickListener {
             startActivityForResult(googleClient.signInIntent, RC_SIGN_IN)
         }
 
+        // 📤 Register
         createAccount.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }
     }
 
     private fun showAlertDialog(title: String, message: String, positiveText: String = "OK") {
-        val builder = androidx.appcompat.app.AlertDialog.Builder(this)
+        val builder = AlertDialog.Builder(this)
         builder.setTitle(title)
         builder.setMessage(message)
         builder.setPositiveButton(positiveText, null)
-
         val dialog = builder.create()
         dialog.show()
-
-        dialog.getButton(AlertDialog.BUTTON_POSITIVE)?.apply {
-            setTextColor(resources.getColor(R.color.purple_500, theme))
-        }
+        dialog.getButton(AlertDialog.BUTTON_POSITIVE)?.setTextColor(
+            resources.getColor(R.color.purple_500, theme)
+        )
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -124,14 +148,15 @@ class LoginActivity : AppCompatActivity() {
             if (task.isSuccessful) {
                 val account = task.result
                 val credential = GoogleAuthProvider.getCredential(account.idToken, null)
-                auth.signInWithCredential(credential).addOnCompleteListener(this) { authTask ->
-                    if (authTask.isSuccessful) {
-                        startActivity(Intent(this, MainActivity::class.java))
-                        finish()
-                    } else {
-                        showAlertDialog("Google Sign-In Failed", "Could not sign in with Google. Please try again.")
+                auth.signInWithCredential(credential)
+                    .addOnCompleteListener(this) { authTask ->
+                        if (authTask.isSuccessful) {
+                            startActivity(Intent(this, MainActivity::class.java))
+                            finish()
+                        } else {
+                            showAlertDialog("Google Sign-In Failed", "Could not sign in with Google. Please try again.")
+                        }
                     }
-                }
             }
         }
     }
